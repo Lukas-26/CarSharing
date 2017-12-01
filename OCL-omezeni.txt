@@ -1,0 +1,34 @@
+context Auto::order()
+pre: self.isDisposable = true
+post: self.isRented = true
+
+context ApprovedDrivers::numDrivers():Integer
+post: result = employees->select(isApproved)->size()
+
+context ApprovedDrivers::addDriver():Boolean
+pre: x : employee.hasDriverLiscence = true
+post: Set{ApprovedEmployees} add: x  
+
+context Order::confirmOrder()
+pre: self.isConfirmed = false and self.hasEmployee = true and self.hasCar = true
+post: self.isConfirmed = true
+
+context Employee::order()
+pre: self.hasOrdered = false and self.isApproved = true
+post: self.hasOrdered = true
+
+context Order
+inv:
+  let noConflict:Boolean =
+      employees.orders->
+            forAll(m | m<>self and m.hasOrdered implies not self.is in hasOrdered implies noConflict)
+
+
+context Car
+inv: self.orders->size()<=1
+
+context Employee
+inv: self.orders->size()<=1
+
+
+
