@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>200</x>
+      <y>60</y>
+      <w>431</w>
+      <h>381</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+    <custom_code>int y=textHeight();
+
+setLineThickness(6);
+setForegroundColor("light_gray");
+drawRectangle(0,0,width,height);
+
+for(String textline : textlines) {
+	y += printCenter(textline,y);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>0</x>
+      <y>160</y>
+      <w>71</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>CA3
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+    <custom_code>setForegroundColor("gray");
+setWordWrap(true);
+setLineThickness(4);
+
+drawRectangle(0,0,width,height);
+
+printCenter(textlines.get(0),20);
+int y = height/2+10-((textlines.size()-1)/2)*textHeight();
+
+for(int i = 1; i &lt; textlines.size(); i++ ){
+	y += printCenter(textlines.get(i),y);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>260</x>
+      <y>220</y>
+      <w>71</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>A2
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int over=0;
+drawRectangle(over,over,width-over,height-over);
+
+printCenter(textlines.get(0),20);
+int y = height/2+10-((textlines.size()-1)/2)*textHeight();
+
+setWordWrap(true);
+
+for(int i = 1; i &lt; textlines.size(); i++ ){
+	y += printCenter(textlines.get(i),y);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>0</x>
+      <y>300</y>
+      <w>71</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>CA4
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+    <custom_code>setForegroundColor("gray");
+setWordWrap(true);
+setLineThickness(4);
+
+drawRectangle(0,0,width,height);
+
+printCenter(textlines.get(0),20);
+int y = height/2+10-((textlines.size()-1)/2)*textHeight();
+
+for(int i = 1; i &lt; textlines.size(); i++ ){
+	y += printCenter(textlines.get(i),y);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>150</x>
+      <y>150</y>
+      <w>61</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>T1
+layer=1</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y = height/2 - textHeight()* textlines.size()*2/3;
+
+setBackgroundColor("white");
+
+for(String textline : textlines) {
+	y += textHeight();
+	printCenter(textline,y);
+}
+
+int lessWidth = width;
+int padding_x = 4;
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+p.addPoint(lessWidth/2,0);
+p.addPoint(lessWidth,lessWidth/2);
+p.addPoint(lessWidth/2,lessWidth);
+p.addPoint(0,lessWidth/2);
+drawPolygon(p);
+
+setForegroundColor("black");
+drawCircle(lessWidth/2,lessWidth/2,lessWidth/2);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>150</x>
+      <y>290</y>
+      <w>61</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>T5
+layer=1</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y = height/2 - textHeight()* textlines.size()*2/3;
+
+setBackgroundColor("white");
+
+for(String textline : textlines) {
+	y += textHeight();
+	printCenter(textline,y);
+}
+
+int lessWidth = width;
+int padding_x = 4;
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+p.addPoint(lessWidth/2,0);
+p.addPoint(lessWidth,lessWidth/2);
+p.addPoint(lessWidth/2,lessWidth);
+p.addPoint(0,lessWidth/2);
+drawPolygon(p);
+
+setForegroundColor("black");
+drawCircle(lessWidth/2,lessWidth/2,lessWidth/2);</custom_code>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>170</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>60</x>
+      <y>310</y>
+      <w>110</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>370</x>
+      <y>80</y>
+      <w>61</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>T2
+layer=1</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y = height/2 - textHeight()* textlines.size()*2/3;
+
+setBackgroundColor("white");
+
+for(String textline : textlines) {
+	y += textHeight();
+	printCenter(textline,y);
+}
+
+int lessWidth = width;
+int padding_x = 4;
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+p.addPoint(lessWidth/2,0);
+p.addPoint(lessWidth,lessWidth/2);
+p.addPoint(lessWidth/2,lessWidth);
+p.addPoint(0,lessWidth/2);
+drawPolygon(p);
+
+setForegroundColor("black");
+drawCircle(lessWidth/2,lessWidth/2,lessWidth/2);</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>370</x>
+      <y>360</y>
+      <w>61</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>T3
+layer=1</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y = height/2 - textHeight()* textlines.size()*2/3;
+
+setBackgroundColor("white");
+
+for(String textline : textlines) {
+	y += textHeight();
+	printCenter(textline,y);
+}
+
+int lessWidth = width;
+int padding_x = 4;
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+p.addPoint(lessWidth/2,0);
+p.addPoint(lessWidth,lessWidth/2);
+p.addPoint(lessWidth/2,lessWidth);
+p.addPoint(0,lessWidth/2);
+drawPolygon(p);
+
+setForegroundColor("black");
+drawCircle(lessWidth/2,lessWidth/2,lessWidth/2);</custom_code>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>170</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>100.0;50.0;100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>270</y>
+      <w>120</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>100.0;10.0;100.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>490</x>
+      <y>220</y>
+      <w>71</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>A1
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int over=0;
+drawRectangle(over,over,width-over,height-over);
+
+printCenter(textlines.get(0),20);
+int y = height/2+10-((textlines.size()-1)/2)*textHeight();
+
+setWordWrap(true);
+
+for(int i = 1; i &lt; textlines.size(); i++ ){
+	y += printCenter(textlines.get(i),y);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>370</x>
+      <y>220</y>
+      <w>61</w>
+      <h>61</h>
+    </coordinates>
+    <panel_attributes>T4
+layer=1</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int y = height/2 - textHeight()* textlines.size()*2/3;
+
+setBackgroundColor("white");
+
+for(String textline : textlines) {
+	y += textHeight();
+	printCenter(textline,y);
+}
+
+int lessWidth = width;
+int padding_x = 4;
+
+setForegroundColor("red");
+Polygon p = new Polygon();
+p.addPoint(lessWidth/2,0);
+p.addPoint(lessWidth,lessWidth/2);
+p.addPoint(lessWidth/2,lessWidth);
+p.addPoint(0,lessWidth/2);
+drawPolygon(p);
+
+setForegroundColor("black");
+drawCircle(lessWidth/2,lessWidth/2,lessWidth/2);</custom_code>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>240</y>
+      <w>70</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>230</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>270</y>
+      <w>90</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>70.0;120.0;10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>270</y>
+      <w>120</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>100.0;10.0;100.0;120.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>100</y>
+      <w>120</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0;100.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>100</y>
+      <w>80</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+</diagram>
